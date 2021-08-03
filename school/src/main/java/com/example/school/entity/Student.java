@@ -32,7 +32,7 @@ public class Student {
     private Double gpa;
 
     @ManyToOne()
-    @JoinColumn(name = "school_id", nullable = false)
+    @JoinColumn(name = "school_id")
     private School school;
 
     public Student() {

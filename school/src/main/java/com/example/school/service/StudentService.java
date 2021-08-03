@@ -18,9 +18,8 @@ public class StudentService {
         return result.get();
     }
 
-    public String saveStudent(Student student) {
-        studentRepository.save(student);
-        return "Added";
+    public Student saveStudent(Student student) {
+        return studentRepository.save(student);
     }
 
     public List<Student> findAll() {
@@ -31,8 +30,9 @@ public class StudentService {
         studentRepository.deleteById(id);
     }
 
-    public String updateStudent(Student student) {
+    public Student updateStudent(Long textId, Student student) {
         studentRepository.saveAndFlush(student);
-        return "Updated";
+        return saveStudent(student);
     }
+
 }
