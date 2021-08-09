@@ -9,6 +9,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.springframework.data.rest.core.annotation.RestResource;
+
 @Entity
 @Table(name = "student")
 public class Student {
@@ -32,6 +34,7 @@ public class Student {
     private Double gpa;
 
     @ManyToOne()
+    @RestResource(exported = false)
     @JoinColumn(name = "school_id")
     private School school;
 

@@ -23,7 +23,7 @@ public class School {
     @Column(nullable = false)
     private String code;
 
-    @Column(name = "active", nullable = false)
+    @Column(nullable = false)
     private Boolean active;
 
     @OneToMany(mappedBy = "school")
